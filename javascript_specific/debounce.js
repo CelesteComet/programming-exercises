@@ -14,12 +14,14 @@ _ = {
     };
 
     return function() {
+      
+      var callNow = immediate && !timeout;
       // clear what was there before
       clearTimeout(timeout);
       // set a new timeout
       timeout = setTimeout(later, wait);
 
-      if (immediate) {
+      if (callNow) {
         fn.apply(context, args);
       }
     }
