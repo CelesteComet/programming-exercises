@@ -16,5 +16,3 @@ var findBottomLeftValue = function(root) {
   }
   return lastProcessed.val;
 };
-
-[1]
